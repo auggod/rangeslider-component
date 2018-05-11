@@ -115,11 +115,6 @@ class RangeSlider extends Nanocomponent {
 
     CONST.START_EVENTS.forEach(evName => this.range.removeEventListener(evName, this._startEventListener))
 
-    this.element.removeEventListener('change', this._changeEventListener)
-
-    this.element.style.cssText = ''
-    delete this.element[CONST.PLUGIN_NAME]
-
     this.range.parentNode.removeChild(this.range)
   }
 
