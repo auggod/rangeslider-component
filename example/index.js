@@ -1,5 +1,14 @@
 const RangeSlider = require('../')
-const rangeslider = new RangeSlider()
+const rangeslider = RangeSlider({
+  onInit: (value, percent, position) => {
+    console.log(value, percent, position)
+  },
+  onSlideStart: (value, percent, position) => {},
+  onSlide: (value, percent, position) => {
+    console.log(value, percent, position)
+  },
+  onSlideEnd: (value, percent, position) => {}
+})
 
 const choo = require('choo')
 const html = require('choo/html')

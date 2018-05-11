@@ -355,4 +355,6 @@ class RangeSlider extends Nanocomponent {
  * @param {number} position
  */
 
-module.exports = RangeSlider
+module.exports = (options) => {
+  if (!(this instanceof RangeSlider)) return new RangeSlider(options)
+}
